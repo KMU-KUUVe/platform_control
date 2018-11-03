@@ -33,7 +33,7 @@ void ackermannCallback(const ackermann_msgs::AckermannDriveStamped::ConstPtr& ms
 		gear = 0x00;
 		speed_1 = speed_total;
 		speed_0 = 0x00;
-		front_brake = 0;
+		front_brake = msg->drive.brake;
 	}
 	else if(msg->drive.speed > -255 && msg->drive.speed < 0){
 		gear = 0x02;
